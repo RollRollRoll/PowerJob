@@ -87,7 +87,7 @@ public class CommonTaskTracker extends HeavyTaskTracker {
         }
 
         // 最后启动任务派发器，否则会出现 TaskTracker 还未创建完毕 ProcessorTracker 已开始汇报状态的情况
-        scheduledPool.scheduleWithFixedDelay(new Dispatcher(), 10, 5000, TimeUnit.MILLISECONDS);
+        scheduledPool.scheduleWithFixedDelay(new Dispatcher(), 10, 1000, TimeUnit.MILLISECONDS);
     }
 
     @Override
